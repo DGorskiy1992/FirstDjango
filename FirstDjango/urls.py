@@ -23,3 +23,5 @@ urlpatterns = [
     path('items/', views.items_list, name="items-list"),
     path('page-1', views.page1),
 ]
+
+#Comment
