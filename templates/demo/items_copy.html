@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Items</title>
+    <style>
+        .menu{
+           border: 1px solid black;
+         }
+         .content{
+            margin-top: 20px;
+            margin-bottom: 20px;
+         }
+         footer{
+            border: 1px solid blue;
+         }
+
+    </style>
+</head>
+<body>
+<nav class="menu">
+    /<a href="/">Домой</a> /<a href="/about"> Об авторе </a>
+</nav>
+<main class="content">
+    <h1>Список товаров</h1>
+    <ol>
+        {% for item in items %}
+        <li><a href="http://127.0.0.1:8000/item/{{ item.id }}">{{ item.name }}</a></li>
+        {% endfor %}
+    </ol>
+</main>
+<footer>
+    (c) Горский Д.В., 2022
+</footer>
+</body>
+</html>

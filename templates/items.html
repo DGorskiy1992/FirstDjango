@@ -1,0 +1,13 @@
+{% extends 'base_temp.html' %}
+{% block nav %}
+
+/<a href="{% url 'home' %}">Домой</a> /<a href=""> Об авторе </a>
+{% endblock %}
+{% block content %}
+<h1>Список товаров</h1>
+<ol>
+    {% for item in items %}
+    <li><a href="{%url 'item-page' item.id %}">{{ item.name }}</a></li>
+    {% endfor %}
+</ol>
+{% endblock %}

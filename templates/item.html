@@ -1,0 +1,7 @@
+{% extends 'base_temp.html' %}
+{% block content %}
+<h1>Страница товара</h1>
+<div>Товар: <strong>{{ item.name }}</strong></div>
+<div>Количество: <strong>{{ item.count|default:"Товар отсутствует"}}</strong></div>
+<div>Производитель: <strong>{{ item.brand }}</strong></div>
+{% endblock %}
